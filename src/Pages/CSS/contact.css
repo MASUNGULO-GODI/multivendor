@@ -1,0 +1,116 @@
+/* Original Styles Preserved */
+.contact {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .infos {
+    width: 35%;
+    padding-right: 20px;
+  }
+  
+  .title, .Title2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .tel, .mail {
+    margin-right: 10px;
+  }
+  
+  .info2, .emails {
+    margin-bottom: 20px;
+  }
+  
+  .hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+  }
+  
+  .forms {
+    width: 65%;
+  }
+  
+  .forms form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-row {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .input-row input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .input-row input:not(:first-child) {
+    margin-left: 2%;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    min-height: 150px;
+  }
+  
+  .submit {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+  
+  /* Responsive Additions */
+  @media (max-width: 992px) {
+    .contact {
+      flex-direction: column;
+    }
+    
+    .infos, .forms {
+      width: 100%;
+      padding-right: 0;
+    }
+    
+    .infos {
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .input-row {
+      flex-direction: column;
+    }
+    
+    .input-row input {
+      width: 100%;
+      margin-left: 0 !important;
+      margin-bottom: 10px;
+    }
+    
+    .input-row input:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .contact {
+      padding: 15px;
+    }
+    
+    .submit {
+      width: 100%;
+    }
+  }

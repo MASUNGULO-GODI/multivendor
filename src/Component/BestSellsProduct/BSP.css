@@ -1,0 +1,198 @@
+/* Base Styles */
+.BSP {
+    padding: 2rem 1rem;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .title1 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .title1 img {
+    width: 1.125rem;
+    height: 2.8125rem;
+    object-fit: contain;
+  }
+  
+  .title1 span {
+    color: #DB4444;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .title2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title2 span {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .viewBtn {
+    background: transparent;
+    border: none;
+    color: #DB4444;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Products Grid */
+  .BSP_item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .product-card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .prod_img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+  
+  .prod_name {
+    font-weight: 500;
+    margin: 0.5rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .price {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  
+  .product_new_price {
+    font-weight: 600;
+    color: #DB4444;
+  }
+  
+  .product_old_price {
+    font-weight: 500;
+    color: #7D7D7D;
+    text-decoration: line-through;
+  }
+  
+  .add_cart_favorite {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.75rem;
+  }
+  
+  .Add_to_cart {
+    background: #DB4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .bi_heart {
+    cursor: pointer;
+    color: #DB4444;
+    font-size: 1.25rem;
+  }
+
+  /* ... (keep all existing styles) ... */
+
+.title2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap; /* Allow items to wrap on small screens */
+  }
+  
+  /* Add this new media query */
+  @media (max-width: 480px) {
+    .title2 {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center-align all items */
+      gap: 1rem; /* Add space between title and button */
+    }
+    
+    .viewBtn {
+      width: 100%; /* Make button full width */
+      max-width: 200px; /* But not too wide */
+      justify-content: center; /* Center button text */
+      padding: 0.75rem; /* Slightly larger tap target */
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .BSP_item {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    
+    .prod_img {
+      height: 160px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .BSP_item {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .title2 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .prod_img {
+      height: 140px;
+    }
+    
+    .Add_to_cart {
+      padding: 0.5rem;
+      font-size: 0.875rem;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .BSP_item {
+      grid-template-columns: 1fr;
+    }
+    
+    .prod_name {
+      white-space: normal;
+    }
+  }

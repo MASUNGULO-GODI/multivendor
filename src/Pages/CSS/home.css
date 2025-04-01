@@ -1,0 +1,528 @@
+.home{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 10px; 
+    width: 100%;
+    padding: 30px;
+    
+}
+.sidebar {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+  }
+  
+.hero{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 450px;
+    margin: 0 auto; 
+}
+.heroleft{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:2px;
+    padding-left: 20px;
+    line-height: 1.1;
+}
+.heroleft .icon{
+    margin-top:5%;
+    width: 30px;
+    height: 35px;
+    margin-left: 20%;
+}
+.heroleft .slogan{
+    margin-left: 13%;
+    font-size: 16px;
+}
+.heroleft .title{
+    font-size: 70px;
+    justify-content: center;
+    margin-left: 85px;
+}
+.heroleft .shop_btn{
+    border-radius: 3px;
+    width: 180px;
+    height: 50px;
+    background-color:transparent;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: 18%;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+}
+
+.bi-arrow{
+    margin-left: 8%;
+}
+.heroleft .shop_btn:hover{
+    text-decoration: underline white;
+    text-indent: -20px;
+}
+.heroleft .shop_btn:hover::before{
+    opacity: 1;
+    text-indent: 0px;
+}
+
+.heroright img{
+    width: 450px;
+    height: 300px;
+    margin-top: 8%;
+    margin-left: 20px;
+}
+.banner{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto; 
+    background-color: black;
+    color: white;
+    margin-top: 3%;
+    margin-left: 13%;
+}
+.LeftBanner{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:2px;
+    padding-left: 10px;
+    line-height: 1.1;
+}
+.LeftBanner span{
+    color: rgb(117, 189, 8);
+    font-family: "Poppins",sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 3%;
+  
+    
+}
+.LeftBanner p{
+    font-family: "Poppins",sans-serif;
+    font-size: 68px;
+    font-weight: 700;
+    margin-left: 3%;
+    
+}
+.LeftBanner button{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(117, 194, 1);
+    color: white;
+    font-family: "Popins",sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 2%;
+    cursor: pointer;
+    margin-left: 3%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.rightBanner img{
+    width: 550px;
+    height: 300px;
+}
+@media (max-width :1286px){
+    .home{
+        gap: 5px;
+        width: 50%;
+    }
+    .hero{
+        width: 1000px;
+        height: 400px;
+        padding: 12px 50px;
+    }
+    .heroleft{
+        gap: 1px;
+        padding-left: 10px;
+        line-height: 1;
+
+    }
+    .heroleft .icon{
+        margin-top: 2%;
+        width: 20px;
+        height: 25px;
+        margin-left: 15%;
+    }
+    .heroleft .slogan{
+        margin-left: 6%;
+        font-size: 15px;
+    }
+    .heroleft .title{
+        font-size: 60px;
+        justify-content: center;
+        margin-left: 50px;
+    }
+    .bi-arrow{
+        margin-left: 8%;
+    }
+    .heroleft .shop_btn:hover{
+        text-decoration: none;
+        text-indent: -20px;
+    }
+    .heroleft .shop_btn:hover::before{
+        opacity: 1;
+        text-indent: 0px;
+    }
+    .heroright .img{
+        width: 380px;
+        height: 250px;
+        margin-top: 8%;
+    }
+    .banner{
+        width: 1094px;
+        height: 400px;
+        margin-top: 2%;
+    }
+    .LeftBanner span{
+        font-size: 13px;
+        margin-left: 4%;
+        line-height: 2;
+    }
+    .LeftBanner p{
+        font-size: 50px;
+        font-weight: 700;
+        margin-left: 3%;
+    }
+    .rightBanner img{
+        width: 450px;
+        height: 250px;
+    }
+}
+@media (max-width :1187px){
+    .home{
+        width: 50%;
+        padding: 10px;
+    }
+    .hero{
+        width: 800px;
+        height: 350px;
+       
+    }
+    .heroleft{
+        gap: 1px;
+        padding-left: 10px;
+
+    }
+    .heroleft .icon{
+        margin-top: 3%;
+        width: 20px;
+        height: 25px;
+        margin-left: 10%;
+    }
+    .heroleft .slogan{
+        margin-left: 10%;
+        font-size: 14px;
+    }
+    .heroleft .title{
+        font-size: 50px;
+        justify-content: center;
+        margin-left: 40px;
+    }
+    .heroleft .shop_btn{
+        max-width: 150px;
+        height: 50px;
+        margin-top: 6%;
+        margin-left: 16%;
+      
+    .bi-arrow{
+        margin-left: 6%;
+    }
+    .heroleft .shop_btn:hover{
+        text-decoration: none;
+        text-indent: -10px;
+    }
+    .heroleft .shop_btn:hover::before{
+        opacity: 1;
+        text-indent: 0px;
+    }
+    .heroright img{
+        width: 250px;
+        height: 200px;
+        margin-top: 5%;
+        margin-left: 10px;
+    }
+    }
+}
+@media (max-width : 1086px){
+.home{
+    width: 20%;
+    padding: 20px;
+}
+.hero{
+    width: 800px;
+    height: 330px;
+}
+.heroleft{
+    gap: 1px;
+    padding-left: 5px;
+}
+.heroleft .icon{
+    margin-top: 3%;
+    width: 15px;
+    height: 20px;
+    margin-left: 5%;
+}
+.heroleft .slogan{
+    font-size: 10px;
+}
+.heroleft .title{
+    font-size: 45px;
+    justify-content: center;
+    margin-left: 35px;
+}
+.heroleft .shop_btn{
+    width: 145px;
+    height: 48px;
+    font-size: 13px;
+    margin-top: 3%;
+    margin-left: 7%;
+}
+.bi-arrow{
+    margin-left: 6%;
+}
+.heroleft .shop_btn:hover{
+    text-decoration: none;
+    text-indent: -10px;
+}
+.heroleft .shop_btn:hover::before{
+    opacity: 1;
+    text-indent: 0px;
+}
+.heroright img{
+    width: 230px;
+    height: 180px;
+    margin-top: 5%;
+    margin-left: 5px;
+}
+}
+@media (max-width :987px){
+    .home{
+        width: 10%;
+        padding: 20px;
+    }
+    .hero{
+        width: 750px;
+       
+    }
+    .heroleft .icon{
+        width: 13px;
+        height: 18px;
+    }
+    .heroleft .slogan{
+        font-size: 10px;
+    }
+    .heroleft .title{
+        font-size: 40px;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    .heroleft .shop_btn{
+        width: 140px;
+        height: 40px;
+        margin-left: 6%;
+    }
+    .heroright img{
+        width: 200px;
+        height: 150px;
+    }
+    }
+
+@media(max-width :892px){
+    .home{
+        width: 10%;
+        padding: 15px;
+    }
+    .hero{
+        width: 712px;
+    }
+}
+@media(max-width :812px){
+    .home{
+        width: 10%;
+        padding: 15px;
+    }
+    .hero{
+        width: 634px;
+        height: 300px;
+    }
+}
+@media(max-width :800px){
+    .home{
+        width: 20%;
+        padding: 10px;
+    }
+    .hero{
+        width: 618px;
+        height: 300px;
+    }
+}
+@media(max-width :740px){
+  
+    .hero{
+        width: 470px;
+        height: 280px;
+    }
+}
+@media(max-width :639px){
+    .hero{
+        width: 470;
+        height: 280px;
+    }
+    .heroleft .icon{
+        margin-top: 2%;
+        width: 10px;
+        height: 14px;
+        margin-left: 20%;
+    }
+    .heroleft .slogan{
+        font-size: 10px;
+    }
+    .heroleft .title{
+        font-size: 30px;
+        justify-content: center;
+    }
+    .heroleft .shop_btn{
+        border-radius: 3px;
+        width: 140px;
+        height: 40px;
+        margin-top: 6%;
+    }
+    .heroright img{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 390px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .hero {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .heroleft {
+        text-align: center;
+        padding: 0;
+    }
+
+    .heroleft .icon {
+        width: 20px;
+        height: 24px;
+        margin: 0 auto;
+    }
+
+    .heroleft .slogan {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .heroleft .title {
+        font-size: 26px;
+        margin: 10px 0;
+        line-height: 1.2;
+    }
+
+    .heroleft .shop_btn {
+        width: 140px;
+        height: 45px;
+        font-size: 14px;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .heroleft .shop_btn:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+    }
+
+    .heroright {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .heroright img {
+        width: 85%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .LeftBanner {
+        text-align: center;
+        padding: 0;
+    }
+
+    .LeftBanner span {
+        font-size: 14px;
+    }
+
+    .LeftBanner p {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.3;
+        margin: 10px 0;
+    }
+
+    .LeftBanner button {
+        width: 130px;
+        height: 40px;
+        font-size: 14px;
+        margin: 10px auto;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .LeftBanner button:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .rightBanner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .rightBanner img {
+        width: 85%;
+        height: auto;
+        max-width: 300px;
+    }
+}

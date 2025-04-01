@@ -1,0 +1,183 @@
+/* Base Styles */
+.flash-sales-container {
+    padding: 1.5rem;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .sales-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .title-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .title-icon {
+    width: 18px;
+    height: 40px;
+  }
+  
+  .today-text {
+    color: #DB4444;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  
+  /* Timer Section - Compact Layout */
+  .timer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .sales-title {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  /* Countdown Timer - Horizontal Layout */
+  .countdown-timer {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+  }
+  
+  .time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 2.5rem;
+  }
+  
+  .time-value {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-weight: 700;
+  }
+  
+  .time-label {
+    font-size: clamp(0.6rem, 2vw, 0.75rem);
+    text-transform: uppercase;
+    color: #666;
+  }
+  
+  /* Products Grid */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Mobile Navigation */
+  .mobile-nav-buttons {
+    display: none;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .mobile-nav-buttons button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .view-all-container {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #DB4444;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .arrow-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Loading State */
+  .products-loading {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  
+  .product-skeleton {
+    aspect-ratio: 3/4;
+    background: #f5f5f5;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.3; }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .title-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    
+    .countdown-timer {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .mobile-nav-buttons {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .flash-sales-container {
+      padding: 1rem;
+    }
+    
+    .products-grid {
+      grid-template-columns: 1fr;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+      grid-auto-columns: 80%;
+    }
+    
+    .products-grid > * {
+      scroll-snap-align: start;
+    }
+    
+    .time-unit {
+      min-width: 2rem;
+    }
+  }
