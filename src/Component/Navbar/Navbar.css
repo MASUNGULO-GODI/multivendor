@@ -37,72 +37,88 @@
   .desktop-nav {
     display: flex;
     align-items: center;
-    flex-grow: 1;
+    flex-grow: 5;
   }
   
   .nav-menu {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-left: auto;
+    padding: 120px;
+    gap: 60px;
+    margin-left: 160px;
   }
   
   .nav-item {
     display: flex;
-    align-items: center;
+    align-items: right;
+
   }
   
   .nav-links {
-    color: #333;
+    color: black;
     display: flex;
     align-items: center;
+    font-weight: bold;
     text-decoration: none;
-    padding: 0.5rem 0.8rem;
+    
     transition: all 0.3s ease;
     font-size: 0.95rem;
   }
   
   .nav-links:hover {
-    color: #007bff;
+    color:black;
   }
   
-  /* Search box */
-  .search-box {
-    display: flex;
-    align-items: center;
-    margin: 0 15px;
-    flex-grow: 1;
-    max-width: 400px;
-  }
+
+
+
+/* Profile and icons */
+.profile-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust gap as needed */
+}
+
+/* Profile and icons */
+.profile-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust gap as needed */
+  margin-left: auto; /* Pushes the profile icons to the right */
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin-left: 18px;
+  align-items: center;
+}
+
+.search-box input {
+  width: 100%;
+  margin-right: 60px;
   
-  .search-box input {
-    width: 100%;
-    padding: 6px 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-    font-size: 0.9rem;
-  }
+
   
-  .search-button {
-    padding: 6px 12px;
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    border-left: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-  }
-  
-  /* Profile and icons */
-  .profile-icon {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+  box-sizing: border-box;
+}
+
+.search-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: right;
+}
+
   
   .icon-item .nav-links {
     padding: 0.5rem;
+   
   }
   
   /* Mobile Navigation */
@@ -131,6 +147,7 @@
     top: 60px;
     left: 0;
     width: 100%;
+    font-weight: bold;
     background: #fff;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);

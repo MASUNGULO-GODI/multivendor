@@ -79,7 +79,7 @@
   .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
+    gap: 5rem;
     margin-bottom: 1.5rem;
   }
   

@@ -1,5 +1,5 @@
 import React from 'react'
-import rightimg from '../../asssets/aside_img.png'
+import rightimg from '../../asssets/sideImage.png'
 import '../CSS/About.css'
 const About = () => {
   return (

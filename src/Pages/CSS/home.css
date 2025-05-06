@@ -254,6 +254,7 @@
         height: 200px;
         margin-top: 5%;
         margin-left: 10px;
+        position: relative;
     }
     }
 }
@@ -313,6 +314,7 @@
     .home{
         width: 10%;
         padding: 20px;
+        position: relative;
     }
     .hero{
         width: 750px;
@@ -338,6 +340,7 @@
     .heroright img{
         width: 200px;
         height: 150px;
+        position: relative;
     }
     }
 
@@ -348,6 +351,11 @@
     }
     .hero{
         width: 712px;
+    }
+    .heroright img{
+        width: 200px;
+        height: 150px;
+        position: relative;
     }
 }
 @media(max-width :812px){
