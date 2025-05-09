@@ -37,11 +37,11 @@
   }
   
   .title-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   }
   
   .sales-title {
@@ -50,11 +50,12 @@
     white-space: nowrap;
   }
   
-  /* Countdown Timer - Horizontal Layout */
   .countdown-timer {
     display: flex;
     gap: 0.25rem;
     align-items: center;
+    margin-left: 170px; /* Pushes the timer to the right */
+    margin-top: -45px;
   }
   
   .time-unit {
@@ -180,4 +181,40 @@
     .time-unit {
       min-width: 2rem;
     }
+
+    /* Responsive font sizes and layout adjustments */
+.time-value {
+  font-size: clamp(1.25rem, 5vw, 1.75rem); /* Responsive font size */
+  font-weight: 700;
+}
+
+.time-label {
+  font-size: clamp(0.6rem, 2vw, 0.75rem);
+  text-transform: uppercase;
+  color: #666;
+}
+
+/* Adjustments for small devices */
+@media (max-width: 768px) {
+  .countdown-timer {
+    width: 100%; /* Take up full width on smaller screens */
+    justify-content: space-between; /* Distribute space between timer units */
+  }
+}
+
+/* Adjustments for very small devices */
+@media (max-width: 480px) {
+  .countdown-timer {
+    gap: 0.2rem; /* Reduce gap for smaller screens */
+    justify-content: flex-start; /* Align to left on very small devices */
+  }
+
+  .time-value {
+    font-size: clamp(1rem, 4vw, 1.25rem); /* Smaller font for smaller screens */
+  }
+
+  .time-label {
+    font-size: clamp(0.5rem, 3vw, 0.6rem); /* Smaller labels */
+  }
+}
   }

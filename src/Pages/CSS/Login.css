@@ -44,16 +44,23 @@
 }
 
 .input {
-  padding: 12px;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #ccc; /* Underline effect */
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none; /* Removes the default focus outline */
+  transition: border-bottom 0.3s ease-in-out; /* Smooth transition */
 }
 
+.input:focus {
+  border-bottom: 2px solid #007BFF; /* Change the color of the underline when focused */
+}
 .Loginbtn {
   padding: 12px;
-  background-color: #000;
+  background-color:orangered;
   color: white;
   border: none;
   border-radius: 4px;
@@ -63,11 +70,11 @@
 }
 
 .Loginbtn:hover {
-  background-color: #333;
+  background-color: orangered;
 }
 
 .confirm {
-  color: #666;
+  color:blue;
   text-align: center;
 }
 
