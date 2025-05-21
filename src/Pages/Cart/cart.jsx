@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Add useNavigate
+import { Link, useNavigate } from 'react-router-dom';
 import '../CSS/cart.css';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCart = async () => {
@@ -17,6 +17,9 @@ const Cart = () => {
             'auth-token': token,
           },
         });
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
         if (data.success) {
           setCartItems(Array.isArray(data.cart) ? data.cart : []);
@@ -55,50 +58,45 @@ const Cart = () => {
       alert("Your cart is empty. Please add items before checkout.");
       return;
     }
-    navigate('/checkout'); // Navigate to checkout page
+    navigate('/checkout');
   };
 
   return (
-    <div className='carts'>
-      <div className="head">
-        <div style={{ marginLeft: "35%" }}>Products</div>
+    <div className='cart-container'>
+      <h2 className="cart-title">Your Shopping Cart</h2>
+      <div className="cart-header">
+        <div>Products</div>
         <div>Price</div>
         <div>Quantity</div>
         <div>Subtotal</div>
       </div>
 
       {cartItems.length === 0 ? (
-        <p style={{ marginTop: "5%" }}>Your cart is empty</p>
+        <p className="empty-cart-message">Your cart is empty</p>
       ) : (
         cartItems.map((item) => (
-          <div className="cart_info" key={item.id}>
-            <div className="product_img_cross_icon">
-              <i className="bi bi-x" onClick={() => removeFromCart(item.id)}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" className="bi bi-x" viewBox="0 0 16 16">
-                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                </svg>
-              </i>
-              <img src={item.image} alt={item.name} className='prod_img_cart' />
+          <div className="cart-item" key={item.id}>
+            <div className="product-img-remove">
+              <i className="bi bi-x remove-icon" onClick={() => removeFromCart(item.id)}></i>
+              <img src={item.image} alt={item.name} className='product-image' />
             </div>
-            <div className="price">${item.newPrice}</div>
-            <div className="Quantity" style={{border:"1px solid black",width:"50px",height:"50px",display:"flex",justifyContent:"center",alignItems:"center"}}>
-              {item.quantity}
-            </div>
-            <div className="product_subtotal">${item.newPrice * item.quantity}</div>
+            <div className="price">${item.newPrice.toFixed(2)}</div>
+            <div className="quantity">{item.quantity}</div>
+            <div className="subtotal">${(item.newPrice * item.quantity).toFixed(2)}</div>
           </div>
         ))
       )}
 
-      <div className="button">
+      <div className="cart-buttons">
         <Link to='/'>
-          <button className='Return'>Return To Shop</button>
+          <button className='return-button'>Return To Shop</button>
         </Link>
-        <button className='Checkout' onClick={handleCheckout}>Proceed To Checkout</button>
+        <button className='checkout-button' onClick={handleCheckout}>Proceed To Checkout</button>
       </div>
 
-      <div className="coupons">
-        <input type='text' className='input_coupon' placeholder='Coupon Code' />
-        <button className='btn_couppon'>Apply</button>
+      <div className="coupon-section">
+        <input type='text' className='coupon-input' placeholder='Coupon Code' />
+        <button className='apply-coupon-button'>Apply</button>
       </div>
     </div>
   );

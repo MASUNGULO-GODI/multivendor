@@ -120,6 +120,10 @@ const Navbar = () => {
             <Link to="/" className="mobile-menu-item" onClick={toggleMenu}>Home</Link>
             <Link to="/contact" className="mobile-menu-item" onClick={toggleMenu}>Contact</Link>
             <Link to="/about" className="mobile-menu-item" onClick={toggleMenu}>About</Link>
+            <Link to="/women-fashion" className="linkscatg" onClick={toggleMenu}>Ladies</Link>
+            <Link to="/mens-fashion" className="linkscatg" onClick={toggleMenu}>Men</Link>
+            <Link to="/kids" className="linkscatg" onClick={toggleMenu}>Kids</Link>
+            <Link to="/Electronics" className="linkscatg" onClick={toggleMenu}>Electronics</Link>
             
             {isAuthenticated ? (
               <Link to="/profile" className="mobile-menu-item" onClick={toggleMenu}>
